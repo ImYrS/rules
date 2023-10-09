@@ -1,7 +1,8 @@
-name: 番茄小说去广告
-desc: 番茄小说去广告 优化版 by ImYrS
+name: "🍅 番茄小说"
+desc: "番茄小说去广告 [优化版] by ImYrS"
 
 # author: ImYrS
+# link: https://github.com/ImYrS
 
 http:
   mitm:
