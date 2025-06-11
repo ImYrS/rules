@@ -1,0 +1,17 @@
+# DeepL
+DOMAIN-SUFFIX,deepl.com,SG
+# Termius SSH
+PROCESS-NAME,Termius Helper (Renderer),DIRECT
+# HuggingFace Mirror / hf-mirror
+DOMAIN-SUFFIX,hf-mirror.com,DIRECT
+# WeChat
+PROCESS-NAME,WeChat,DIRECT
+PROCESS-NAME,微信,DIRECT
+# Google AI Studio
+DOMAIN-SUFFIX,aistudio.google.com,SG
+DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com,SG
+# Infini Money
+DOMAIN-SUFFIX,infini.money,JP
+# Anthropic
+DOMAIN-SUFFIX,anthropic.com,SG
+DOMAIN-SUFFIX,claude.ai,SG
