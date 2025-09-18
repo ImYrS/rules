@@ -1,5 +1,6 @@
-#!name= Nicergram
-#!desc= Make Nicegram Nicer! 移除消息广告并将对话列表 Pin 广告置空。
+#!name= Nicegram 去广告
+#!desc= 移除消息流广告、置空对话列表 Pin 广告
+#!icon= https://raw.githubusercontent.com/ImYrS/rules/refs/heads/main/plugins/nicergram/nicegram.jpg
 #!author= ImYrS
 #!tag = 去广告
 
