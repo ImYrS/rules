@@ -1,0 +1,15 @@
+#!name= Nicergram
+#!desc= Make Nicegram Nicer! 移除消息广告并将对话列表 Pin 广告置空。
+#!author= ImYrS
+#!tag = 去广告
+
+[Rule]
+DOMAIN-KEYWORD,nicegram.github.io,REJECT
+DOMAIN-SUFFIX,adsgram.me,REJECT
+DOMAIN-SUFFIX,adsgram.ai,REJECT
+
+[Rewrite]
+^https://nicegram\.cloud/api/v7/att/scroll-to-earn/ads-list(?:\?.*)?$ response-body-json-replace data []
+
+[MITM]
+hostname = nicegram.cloud, nicegram.github.io
