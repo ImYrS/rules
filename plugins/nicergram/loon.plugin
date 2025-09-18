@@ -1,16 +1,24 @@
 #!name= Nicegram 去广告
-#!desc= 移除消息流广告、置空对话列表 Pin 广告
+#!desc= 移除消息流和指定广告，拦截 ATT 活动上报
 #!icon= https://raw.githubusercontent.com/ImYrS/rules/refs/heads/main/plugins/nicergram/nicegram.jpg
 #!author= ImYrS
 #!tag = 去广告
+
+[Argument]
+# disable_att = switch,true,tag=禁用 ATT 功能,desc=拦截 ATT 相关上报和活动
 
 [Rule]
 DOMAIN-KEYWORD,nicegram.github.io,REJECT
 DOMAIN-SUFFIX,adsgram.me,REJECT
 DOMAIN-SUFFIX,adsgram.ai,REJECT
+DOMAIN-SUFFIX,app-analytics-services.com,REJECT
+URL-REGEX,"https://nicegram.cloud/api/v7/att/user-action",REJECT
 
 [Rewrite]
 ^https://nicegram\.cloud/api/v7/att/scroll-to-earn/ads-list(?:\?.*)?$ response-body-json-replace data []
+https://nicegram.cloud/api/v7/att/scroll-to-earn/user-info response-body-json-replace data.attPoints 888888888
+https://nicegram.cloud/api/v7/user/info response-body-json-replace data.user.subscriptionPlus true data.user.store_subscription true data.user.subscription true data.user.lifetime_subscription true
+
 
 [MITM]
-hostname = nicegram.cloud, nicegram.github.io
+hostname = nicegram.cloud
