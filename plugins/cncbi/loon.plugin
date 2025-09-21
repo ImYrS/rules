@@ -1,0 +1,12 @@
+#!name= 信银国际优化
+#!desc= 移除日志上报，强制直连
+#!icon= https://www.cncbinternational.com/personal/e-banking/inmotion/images/inmotion_logo.png
+#!author= ImYrS
+#!tag = 功能增强
+
+[Rule]
+URL-REGEX,"https://maas.cncbinternational.com:8002/loggw/logUpload.do",REJECT-DICT-NO-DROP
+DOMAIN-SUFFIX,cncbinternational.com,DIRECT
+
+[MITM]
+hostname = maas.cncbinternational.com
