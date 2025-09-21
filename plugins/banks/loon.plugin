@@ -1,0 +1,9 @@
+#!name= 拦截银行 App 代理检测
+#!desc= 支持：农业银行
+#!author= ImYrS
+#!tag = 功能增强
+
+[Rule]
+DOMAIN,msmp.abchina.com.cn,REJECT
+
+[MITM]
