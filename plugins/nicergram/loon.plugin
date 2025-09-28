@@ -1,5 +1,5 @@
 #!name= Nicegram 去广告
-#!desc= 移除消息流和指定广告，拦截 ATT 活动上报
+#!desc= 移除消息流和置顶广告，拦截 ATT 活动上报
 #!icon= https://raw.githubusercontent.com/ImYrS/rules/refs/heads/main/plugins/nicergram/nicegram.jpg
 #!author= ImYrS
 #!tag = 去广告
