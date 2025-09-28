@@ -17,7 +17,7 @@ URL-REGEX,"https://nicegram.cloud/api/v7/att/user-action",REJECT
 [Rewrite]
 ^https://nicegram\.cloud/api/v7/att/scroll-to-earn/ads-list(?:\?.*)?$ response-body-json-replace data []
 https://nicegram.cloud/api/v7/att/scroll-to-earn/user-info response-body-json-replace data.attPoints 888888888
-https://nicegram.cloud/api/v7/user/info response-body-json-replace data.user.subscriptionPlus true data.user.store_subscription true data.user.subscription true data.user.lifetime_subscription true
+https://nicegram.cloud/api/v7/user/info response-body-json-replace data.user.subscriptionPlus true data.user.store_subscription true data.user.subscription true data.user.lifetime_subscription true data.user.gems_balance 99999
 
 
 [MITM]
