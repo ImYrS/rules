@@ -2,7 +2,7 @@
 #!desc= 移除消息流和置顶广告，拦截 ATT 活动上报
 #!icon= https://raw.githubusercontent.com/ImYrS/rules/refs/heads/main/plugins/nicergram/nicegram.jpg
 #!author= ImYrS
-#!tag = 去广告
+#!tag= 去广告
 
 [Argument]
 # disable_att = switch,true,tag=禁用 ATT 功能,desc=拦截 ATT 相关上报和活动

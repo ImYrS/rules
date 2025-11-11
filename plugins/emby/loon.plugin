@@ -1,7 +1,8 @@
 #!name= Emby Premiere Unblock
 #!desc= 解锁 Emby Premiere 会员功能
 #!author= ImYrS
-#!tag = 功能增强
+#!category= Emby
+#!tag= 功能增强
 
 [Script]
 http-response ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice requires-body=1,max-size=0, script-path=https://raw.githubusercontent.com/ImYrS/rules/refs/heads/main/plugins/emby/emby_premiere.js
