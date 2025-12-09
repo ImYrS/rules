@@ -1,4 +1,8 @@
 [Rule]
+# Proxy
+PROCESS-NAME,v2ray,DIRECT
+PROCESS-NAME,ss-local,DIRECT
+
 # DeepL
 DOMAIN-SUFFIX,deepl.com,SG
 
@@ -13,12 +17,24 @@ PROCESS-NAME,WeChat,DIRECT
 PROCESS-NAME,微信,DIRECT
 
 # Google AI Studio
-DOMAIN-SUFFIX,aistudio.google.com,SG
-DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com,SG
+DOMAIN-SUFFIX,aistudio.google.com,AI
+DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com,AI
 
 # Infini Money
 DOMAIN-SUFFIX,infini.money,JP
 
-# Anthropic
-DOMAIN-SUFFIX,anthropic.com,SG
-DOMAIN-SUFFIX,claude.ai,SG
+# ImmersiveTranslate
+DOMAIN-SUFFIX,immersivetranslate.com,REJECT
+
+# Sora by OpenAI
+DOMAIN-SUFFIX,sora.chatgpt.com,"🇺🇲 US"
+
+# Surge Update
+DOMAIN-SUFFIX,dl.nssurge.com,"🇸🇬 SG"
+
+# AnyGo Crack
+DOMAIN,order.luckydogsoft.com,REJECT
+DOMAIN,ip-api.com,REJECT
+
+# YToo Emby
+DOMAIN-SUFFIX,st.stentvessel.xyz,"🇸🇬 SG"
