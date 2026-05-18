@@ -7,3 +7,6 @@ DOMAIN-SUFFIX,paypal.com
 # Capital One
 DOMAIN-SUFFIX,capitalone.com
 DOMAIN-SUFFIX,capitalone360.com
+
+# SoFi
+DOMAIN-SUFFIX,sofi.com
