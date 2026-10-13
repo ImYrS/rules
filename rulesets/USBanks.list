@@ -10,3 +10,19 @@ DOMAIN-SUFFIX,capitalone360.com
 
 # SoFi
 DOMAIN-SUFFIX,sofi.com
+
+# U.S. Bank
+DOMAIN-SUFFIX,usbank.com
+
+# Wells Fargo
+DOMAIN-SUFFIX,wellsfargo.com
+
+# Bank of America
+DOMAIN-SUFFIX,bofa.com
+DOMAIN-SUFFIX,bankofamerica.com
+
+# Chase
+DOMAIN-SUFFIX,chase.com
+
+# Equifax
+DOMAIN-SUFFIX,equifax.com
