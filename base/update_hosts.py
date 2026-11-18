@@ -13,6 +13,8 @@ DOMAIN = re.compile(
     r"[a-z](?:[a-z0-9-]{0,61}[a-z0-9])?",
     re.IGNORECASE | re.ASCII,
 )
+HOST_LABEL = r"[a-z0-9_](?:[a-z0-9_-]{0,61}[a-z0-9_])?"
+HOST_PATTERN = re.compile(rf"(?:\*\.)?{HOST_LABEL}(?:\.{HOST_LABEL})*")
 SURGE_BRANCH = '{% if request.target == "surge" %}\n'
 BRANCH_END = "{% endif %}\n"
 
@@ -26,10 +28,25 @@ def parse_hosts(source):
 
         domain, separator, target = line.partition("=")
         domain = domain.strip().lower()
-        if not separator or not DOMAIN.fullmatch(domain):
-            raise ValueError(f"host.tpl 第 {line_number} 行应为「域名 = IP 或目标域名」")
+        if not separator or not HOST_PATTERN.fullmatch(domain):
+            raise ValueError(f"host.tpl 第 {line_number} 行应为「主机名 = 映射」")
         if domain in hosts:
             raise ValueError(f"host.tpl 第 {line_number} 行的域名已出现")
+
+        target = target.strip()
+        if target.startswith("server:"):
+            server = target.removeprefix("server:").strip()
+            if server != "system":
+                try:
+                    if "%" in server:
+                        raise ValueError
+                    server = str(ipaddress.ip_address(server))
+                except ValueError:
+                    raise ValueError(
+                        f"host.tpl 第 {line_number} 行的 server: 后需要 IP 或 system"
+                    ) from None
+            hosts[domain] = f"server:{server}"
+            continue
 
         values = [value.strip() for value in target.split(",")]
         try:
@@ -55,17 +72,31 @@ def update_template(template, hosts):
     if not surge_start or not surge_end:
         raise ValueError("host_base.tpl 找不到完整的 Surge 分支")
 
-    clash_hosts = "\n".join(
-        f"  {json.dumps(domain)}: {json.dumps(target)}"
-        for domain, target in hosts.items()
-    )
+    clash_hosts = []
+    dns_policy = []
+    for domain, target in hosts.items():
+        # A leading dot in Mihomo matches subdomains at every depth, as Surge's *. does.
+        key = json.dumps(domain.removeprefix("*"))
+        if isinstance(target, str) and target.startswith("server:"):
+            dns_policy.append(f"    {key}: {json.dumps(target.removeprefix('server:'))}\n")
+        else:
+            clash_hosts.append(f"  {key}: {json.dumps(target)}\n")
+
     surge_hosts = "\n".join(
         f"{domain} = {', '.join(target) if isinstance(target, list) else target}"
         for domain, target in hosts.items()
     )
     clash, clash_count = re.subn(
         r"(?m)^hosts:\n(?:[ \t]+[^\n]*\n|\n)*",
-        f"hosts:\n{clash_hosts}\n\n",
+        f"hosts:\n{''.join(clash_hosts)}\n",
+        clash,
+    )
+    policy = "  nameserver-policy:\n" + "".join(dns_policy)
+    if not dns_policy:
+        policy = "  nameserver-policy: {}\n"
+    clash, policy_count = re.subn(
+        r"(?m)^  nameserver-policy:(?: \{\})?\n(?:    [^\n]*\n)*",
+        policy,
         clash,
     )
     surge, surge_count = re.subn(
@@ -75,6 +106,8 @@ def update_template(template, hosts):
     )
     if clash_count != 1 or surge_count != 1:
         raise ValueError("host_base.tpl 中 Clash 的 hosts 段和 Surge 的 [Host] 段应各有一处")
+    if policy_count != 1:
+        raise ValueError("host_base.tpl 中 Clash 的 nameserver-policy 段应恰好有一处")
     return clash + surge_start + surge + surge_end + other
 
 

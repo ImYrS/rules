@@ -50,16 +50,27 @@ hosts:
   "akamai-bj.linkcubecloud.net": "akamai-bj.linkcube-cloud.net"
   "akamai-gz.linkcubecloud.net": "akamai-gz.linkcube-cloud.net"
   "akamai-sh.linkcubecloud.net": "akamai-sh.linkcube-cloud.net"
+  "ip6-localhost": "::1"
+  "ip6-loopback": "::1"
 
 {% if default(request.clash.dns, "") == "1" %}
 dns:
   enable: true
+  nameserver-policy:
+    "doh.pub": "119.29.29.29"
+    "routerlogin.net": "system"
+    "_hotspot_.m2m": "system"
+    "router.asus.com": "system"
+    "hotspot.cslwifi.com": "system"
+    "amplifi.lan": "system"
+    ".lan": "system"
   nameserver:
   - https://dns.alidns.com/dns-query#h3=true
   - https://doh.pub/dns-query
   direct-nameserver:
   - https://dns.alidns.com/dns-query#h3=true
   - https://doh.pub/dns-query
+  direct-nameserver-follow-policy: true
   proxy-server-nameserver:
   - https://doh.pub/dns-query
   - https://dns.alidns.com/dns-query#h3=true
@@ -124,6 +135,15 @@ a2dcf016-bf54-40e1-a856-a9d0d30a2d36.afdiancdn.org = 990f10b7-779c-48e6-b364-c08
 akamai-bj.linkcubecloud.net = akamai-bj.linkcube-cloud.net
 akamai-gz.linkcubecloud.net = akamai-gz.linkcube-cloud.net
 akamai-sh.linkcubecloud.net = akamai-sh.linkcube-cloud.net
+ip6-localhost = ::1
+ip6-loopback = ::1
+doh.pub = server:119.29.29.29
+routerlogin.net = server:system
+_hotspot_.m2m = server:system
+router.asus.com = server:system
+hotspot.cslwifi.com = server:system
+amplifi.lan = server:system
+*.lan = server:system
 
 {% endif %}
 {% if request.target == "loon" %}
