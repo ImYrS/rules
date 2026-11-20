@@ -1,28 +1,84 @@
 # American Express
 DOMAIN-SUFFIX,americanexpress.com
+DOMAIN-SUFFIX,amexgiftcard.com
+DOMAIN-SUFFIX,amexoffers.com
+DOMAIN-SUFFIX,amextravel.com
 
 # PayPal
 DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypal.me
+DOMAIN-SUFFIX,py.pl
+DOMAIN-SUFFIX,braintree-api.com
+DOMAIN-SUFFIX,braintreegateway.com
+DOMAIN-SUFFIX,venmo.com
+DOMAIN-SUFFIX,xoom.com
 
 # Capital One
 DOMAIN-SUFFIX,capitalone.com
 DOMAIN-SUFFIX,capitalone360.com
+DOMAIN-SUFFIX,capitalonebank.com
+DOMAIN-SUFFIX,capitaloneshopping.com
+DOMAIN-SUFFIX,capitalonetravel.com
+DOMAIN-SUFFIX,discover.com
 
 # SoFi
 DOMAIN-SUFFIX,sofi.com
 
 # U.S. Bank
 DOMAIN-SUFFIX,usbank.com
+DOMAIN-SUFFIX,usbankfocus.com
+DOMAIN-SUFFIX,usbankreliacard.com
+DOMAIN-SUFFIX,usbankrewardscard.com
+DOMAIN-SUFFIX,myusbankprepaidcard.com
+DOMAIN-SUFFIX,elanfinancialservices.com
+DOMAIN-SUFFIX,myaccountaccess.com
+DOMAIN-SUFFIX,elavon.com
+DOMAIN-SUFFIX,convergepay.com
+DOMAIN-SUFFIX,mypaymentsinsider.com
 
 # Wells Fargo
 DOMAIN-SUFFIX,wellsfargo.com
+DOMAIN-SUFFIX,wellsfargoadvisors.com
+DOMAIN-SUFFIX,wf.com
 
 # Bank of America
 DOMAIN-SUFFIX,bofa.com
 DOMAIN-SUFFIX,bankofamerica.com
+DOMAIN-SUFFIX,merrill.com
+DOMAIN-SUFFIX,merrilledge.com
+DOMAIN-SUFFIX,ml.com
 
 # Chase
 DOMAIN-SUFFIX,chase.com
+DOMAIN-SUFFIX,chasepaymentech.com
+DOMAIN-SUFFIX,jpmorgan.com
+DOMAIN-SUFFIX,paymentech.com
+DOMAIN-SUFFIX,paymentech.net
 
 # Equifax
 DOMAIN-SUFFIX,equifax.com
+DOMAIN-SUFFIX,myequifax.com
+DOMAIN-SUFFIX,theworknumber.com
+
+# TransUnion
+DOMAIN-SUFFIX,transunion.com
+DOMAIN-SUFFIX,identityforce.com
+DOMAIN-SUFFIX,mysmartmove.com
+
+# Shared U.S. credit bureau services
+DOMAIN-SUFFIX,annualcreditreport.com
+DOMAIN-SUFFIX,optoutprescreen.com
+
+# Credit Karma
+DOMAIN-SUFFIX,creditkarma.com
+
+# moomoo
+DOMAIN-SUFFIX,moomoo.com
+DOMAIN-SUFFIX,moomooapp.com
+DOMAIN-SUFFIX,futuclearing.com
+DOMAIN,webapi.futunn.com
+
+# X
+DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,twitter.com
+DOMAIN-SUFFIX,t.co
