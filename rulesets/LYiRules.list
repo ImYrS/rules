@@ -1,0 +1,10 @@
+# Hugging Face downloads
+DIRECT,[]DOMAIN-SUFFIX,hf.co
+DIRECT,[]DOMAIN-SUFFIX,hf-mirror.com
+
+# Dia Browser
+🇺🇲 US,[]DOMAIN-SUFFIX,diabrowser.com
+🇺🇲 US,[]DOMAIN-SUFFIX,diabrowser.engineering
+
+# LYi
+DIRECT,[]DOMAIN-SUFFIX,lyi.hk

@@ -1,0 +1,32 @@
+# Termius
+DIRECT,[]PROCESS-NAME,Termius Helper (Renderer)
+
+# Hugging Face downloads
+DIRECT,[]DOMAIN-SUFFIX,hf.co
+DIRECT,[]DOMAIN-SUFFIX,hf-mirror.com
+
+# Immersive Translate
+REJECT,[]DOMAIN-SUFFIX,immersivetranslate.com
+
+# Surge update
+🇸🇬 SG,[]DOMAIN-SUFFIX,dl.nssurge.com
+
+# AnyGo
+REJECT,[]DOMAIN,order.luckydogsoft.com
+REJECT,[]DOMAIN,ip-api.com
+
+# YToo Emby
+🇸🇬 SG,[]DOMAIN-SUFFIX,st.stentvessel.xyz
+
+# Southwest Airlines
+🇺🇲 US,[]DOMAIN-SUFFIX,southwest.com
+
+# Dia Browser
+🇺🇲 US,[]DOMAIN-SUFFIX,diabrowser.com
+🇺🇲 US,[]DOMAIN-SUFFIX,diabrowser.engineering
+
+# LYi
+DIRECT,[]DOMAIN-SUFFIX,lyi.hk
+
+# Binance
+🇸🇬 SG,[]DOMAIN-SUFFIX,binance.com
