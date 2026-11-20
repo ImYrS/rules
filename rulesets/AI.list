@@ -50,5 +50,6 @@ DOMAIN-SUFFIX,x.ai
 
 # Meta AI / Mistral AI / Perplexity
 DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,muse.ai
 DOMAIN-SUFFIX,mistral.ai
 DOMAIN-SUFFIX,perplexity.ai
