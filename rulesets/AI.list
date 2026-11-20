@@ -5,7 +5,6 @@ DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,oaistatsig.com
 DOMAIN,cdn.openaimerge.com
-DOMAIN,challenges.cloudflare.com
 
 # Anthropic / Claude
 DOMAIN-SUFFIX,anthropic.com
