@@ -55,6 +55,14 @@ DOMAIN-SUFFIX,jpmorgan.com
 DOMAIN-SUFFIX,paymentech.com
 DOMAIN-SUFFIX,paymentech.net
 
+# PNC
+DOMAIN-SUFFIX,pnc.com
+DOMAIN-SUFFIX,pncbank.com
+DOMAIN-SUFFIX,pncmortgage.com
+DOMAIN-SUFFIX,pnccapitaladvisors.com
+DOMAIN-SUFFIX,pncmc.com
+DOMAIN-SUFFIX,pncsites.com
+
 # Equifax
 DOMAIN-SUFFIX,equifax.com
 DOMAIN-SUFFIX,myequifax.com
