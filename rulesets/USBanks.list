@@ -13,6 +13,15 @@ DOMAIN-SUFFIX,braintreegateway.com
 DOMAIN-SUFFIX,venmo.com
 DOMAIN-SUFFIX,xoom.com
 
+# Wise
+DOMAIN-SUFFIX,wise.com
+DOMAIN-SUFFIX,transferwise.com
+
+# Link by Stripe
+DOMAIN-SUFFIX,link.com
+DOMAIN-SUFFIX,link.co
+DOMAIN-SUFFIX,onelink.com
+
 # Capital One
 DOMAIN-SUFFIX,capitalone.com
 DOMAIN-SUFFIX,capitalone360.com
