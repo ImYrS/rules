@@ -33,6 +33,9 @@ DOMAIN-SUFFIX,discover.com
 # SoFi
 DOMAIN-SUFFIX,sofi.com
 
+# Nu
+DOMAIN-SUFFIX,nu.com
+
 # U.S. Bank
 DOMAIN-SUFFIX,usbank.com
 DOMAIN-SUFFIX,usbankfocus.com
