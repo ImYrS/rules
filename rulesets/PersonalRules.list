@@ -30,3 +30,8 @@ DIRECT,[]DOMAIN-SUFFIX,lyi.hk
 
 # Binance
 🇸🇬 SG,[]DOMAIN-SUFFIX,binance.com
+
+# Ego Lite
+REJECT,[]DOMAIN-SUFFIX,i.posthog.com
+REJECT,[]DOMAIN,eventflow.citrolabs.ai
+REJECT,[]DOMAIN-SUFFIX,ingest.us.sentry.io
